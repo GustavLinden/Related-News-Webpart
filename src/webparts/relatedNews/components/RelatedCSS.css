@@ -1,0 +1,16 @@
+.container {
+  border: 3px grey solid;
+  background-color: aquamarine;
+  padding: 5px;
+  width: max-content;
+}
+.filterList {
+  margin: 3px;
+  padding: 4px;
+  text-align: center;
+}
+
+.linksToShow {
+  border: 1px solid black;
+  margin: 5px;
+}

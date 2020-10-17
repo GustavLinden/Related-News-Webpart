@@ -1,0 +1,5 @@
+Detta behövs för att få Webparten att läsa och visa länkar:
+Listan Site Pages måste ha en column, som ska heta "NewsType"
+NewsType ska vara ett choice, och obligatoriskt. 
+
+Ska man arbeta med webparten måste man göra det med ?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js då den måste köras på en site page.
