@@ -20,7 +20,7 @@ export default class FilterLists extends React.Component<ISPListGUID, ISPListSta
   _getListsFromSitePages = async (): Promise<void> => {
        await sp.web.lists
       .getById(`${this.props.spGUID}`)
-      .items.select("Title, EncodedAbsUrl, Id, NewsCategory")
+      .items.select("Title, EncodedAbsUrl, Id, NewsCategory, PromotedState")
       .get()
       .then((responses) => {
         this.setState({ items: responses });

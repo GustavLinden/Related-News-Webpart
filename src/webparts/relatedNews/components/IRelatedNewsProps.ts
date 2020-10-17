@@ -15,6 +15,7 @@ export interface ILista {
     Id: number,
     NewsCategory: string,
     EncodedAbsUrl: string,
+    PromotedState: number
 }
 export interface ISPListGUID {
   spGUID: string;
