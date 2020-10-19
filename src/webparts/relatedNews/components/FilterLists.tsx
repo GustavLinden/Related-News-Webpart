@@ -24,7 +24,7 @@ export default class FilterLists extends React.Component<ISPListGUID, ISPListSta
       .get()
       .then((responses) => {
         this.setState({ items: responses });
-        console.log(this.state.items);
+
       });
   };
 

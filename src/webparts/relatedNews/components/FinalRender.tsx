@@ -2,15 +2,16 @@ import * as React from 'react';
 import { FinalRenderProps} from './IRelatedNewsProps';
 
 const FinalRender: React.FC <FinalRenderProps> = (props): JSX.Element => {
-const NewsCategory: string = props.category.join();
- const pagesToInclude = props.pagesToLoad.filter(t => {
-   return NewsCategory.includes(t.NewsCategory);
- } )
- const res = pagesToInclude.filter((pti) => {
+const res = props.pagesToLoad.filter((pti) => {
   return pti.PromotedState === 2;
  });
-
-  const itemsToRender = () => res.reverse().slice(0,6).map((ts) => {
+const cat = props.category.toString();
+const pagesToInclude = res.filter((e) => {
+  if (e.NewsCategory.includes(cat) || cat.includes(e.NewsCategory)) {
+  return e;
+  }
+  });
+  const itemsToRender = () => pagesToInclude.reverse().slice(0,6).map((ts) => {
    return (
     <div><a href={ts.EncodedAbsUrl} data-interception="off" target="_blank" rel="noopener noreferrer">{ts.Title}</a></div>
    )
@@ -22,4 +23,4 @@ return (
 }
 
 export default FinalRender;
-
+//Kolla över mtachningar vad som är bäst. string mot string eller array mot array;
