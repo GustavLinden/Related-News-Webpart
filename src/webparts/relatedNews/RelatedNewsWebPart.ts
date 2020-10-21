@@ -12,11 +12,13 @@ import * as strings from 'RelatedNewsWebPartStrings';
 import RelatedNews from './components/RelatedNews';
 import { IRelatedNewsProps } from './components/IRelatedNewsProps';
 import  './components/RelatedCSS.css';
+import { initializeIcons } from '@uifabric/icons';
+
 export interface IRelatedNewsWebPartProps {
   description: string;
   context: WebPartContext;
 }
-
+initializeIcons();
 export default class RelatedNewsWebPart extends BaseClientSideWebPart<IRelatedNewsWebPartProps> {
 
   public onInit(): Promise<void> {

@@ -6,7 +6,7 @@ export default class LinksToShow extends React.Component<IAllListsProp, ILinksTo
   constructor(props: IAllListsProp){
     super(props)
     this.state = {
-      pagesToLoad: [], thisPage: [], category: []
+      pagesToLoad: [], thisPage: [], category: ""
     }
   }
   componentDidUpdate(prevProps) {
@@ -23,7 +23,7 @@ export default class LinksToShow extends React.Component<IAllListsProp, ILinksTo
     const NewsCategory = pageNotToLink.map((r => {
       return r.NewsCategory;
     }));
-    this.setState({ category: NewsCategory });
+    this.setState({ category: NewsCategory.toString() });
     this.setState({ thisPage: pageNotToLink });
     const allToLink = this.props.allLists.filter((list) => {
       return list.Id !== Id ;

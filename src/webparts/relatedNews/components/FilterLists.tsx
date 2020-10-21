@@ -6,7 +6,9 @@ import "@pnp/sp/sites";
 import "@pnp/sp/lists";
 import "@pnp/sp/items";
 import { ISPListGUID, ISPListState} from './IRelatedNewsProps';
+import { initializeIcons } from '@uifabric/icons';
 
+initializeIcons();
 export default class FilterLists extends React.Component<ISPListGUID, ISPListState> {
   constructor(props: ISPListGUID) {
     super(props)

@@ -13,7 +13,7 @@ export interface IAllListsProp {
 export interface ILista {
     Title: string,
     Id: number,
-    NewsCategory: string,
+    NewsCategory: Array<string>,
     EncodedAbsUrl: string,
     PromotedState: number
 }
@@ -30,10 +30,10 @@ export interface IRelatedNewsState {
 export interface ILinksToShowState {
   pagesToLoad: ILista [],
   thisPage: ILista [],
-  category: Array<string>
+  category: string
 }
 export interface FinalRenderProps{
-  category: Array<string>;
+  category: string;
   pagesToLoad: Array<ILista>;
 
 }
